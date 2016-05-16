@@ -1,0 +1,101 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="fill_vertical"
+    android:background="#FFFFFF"
+    android:clipToPadding="true"
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Fragment.TaxiServiceFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rlo_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingStart="8dp"
+            tools:ignore="RtlSymmetry">
+
+            <TextView
+                android:id="@+id/ftr_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ftr_rating"
+            android:layout_width="100dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/rlo_name"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitStart"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/ftr_categories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/ftr_rating"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/ftr_timing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/rlo_name"
+            android:layout_marginEnd="8dp"
+            android:paddingTop="8dp"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/ftr_callInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ftr_categories"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp" />
+
+        <fragment
+            android:id="@+id/ftr_map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rlo_name"
+            android:layout_marginTop="90dp"
+            tools:context=".MapsActivity" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_call"
+            android:layout_width="56dp"
+            android:layout_height="62dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/rlo_name"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/ripple_ovel"
+            android:scaleType="center"
+            android:src="@drawable/phone24"
+            app:borderWidth="0dp"
+            app:elevation="6dp" />
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>

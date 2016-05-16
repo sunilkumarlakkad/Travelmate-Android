@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/taxi"
+            android:checked="true"
+            android:icon="@drawable/map"
+            android:title="@string/find_taxi" />
+        <item
+            android:id="@+id/attraction"
+            android:checked="false"
+            android:icon="@drawable/attraction"
+            android:title="@string/attractions" />
+
+        <item
+            android:id="@+id/video"
+            android:checked="false"
+            android:icon="@drawable/video"
+            android:title="@string/videos" />
+
+        <item
+            android:id="@+id/notes"
+            android:checked="false"
+            android:icon="@drawable/note"
+            android:title="@string/notes" />
+
+    </group>
+
+</menu>

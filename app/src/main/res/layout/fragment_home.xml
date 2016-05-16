@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rloHomeFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Fragment.HomeFragment">
+
+
+    <ImageView
+        android:id="@+id/imgCar"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/car_logo"
+        tools:ignore="ContentDescription" />
+
+    <RelativeLayout
+        android:id="@+id/rloOrigin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgCar"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextViewOrigin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittextroundborder"
+            android:ems="10"
+            android:hint="@string/origin"
+            android:imeOptions="actionDone"
+            android:paddingEnd="30dp"
+            android:singleLine="true"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/imgViewClearOrigin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/autoCompleteTextViewOrigin"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="4dp"
+            android:clickable="true"
+            android:src="@drawable/cancel"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rloDestination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rloOrigin"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextViewDestination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittextroundborder"
+            android:ems="10"
+            android:hint="@string/destination"
+            android:imeOptions="actionDone"
+            android:paddingEnd="30dp"
+            android:singleLine="true"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/imgViewClearDestination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/autoCompleteTextViewDestination"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="4dp"
+            android:clickable="true"
+            android:src="@drawable/cancel"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button_findTaxi"
+        android:layout_width="@dimen/item_size"
+        android:layout_height="@dimen/item_size"
+        android:layout_below="@id/rloDestination"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/rounded_button"
+        android:text="@string/go"
+        android:textColor="@color/colorIcons"
+        android:textSize="16sp" />
+
+</RelativeLayout>
